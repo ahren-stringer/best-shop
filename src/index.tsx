@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import './responsive.css'
-import {  createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import ErrporPage from './components/pages/404';
 import Checkout from './components/pages/Checkout';
 import ProductDetailContainer from './components/pages/ProductDetail/ProductDetailContainer';
@@ -25,22 +25,26 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrporPage />,
     children: [
-      { index: true, element: <CatalogContainer /> },
+      {
+        index: true,
+        element: <CatalogContainer />
+      },
       {
         path: 'products/:productId',
         element: <ProductDetailContainer />
       },
       {
         path: "cart/",
-        element: <CartContainer />
+        element: <CartContainer />,
+        errorElement: <ErrporPage />,
       },
       {
         path: "checkout/",
         element: <Checkout />
       },
       {
-        path: "/thanks",
-        element: <Thanks/>
+        path: "thanks/",
+        element: <Thanks />
       },
     ],
   },

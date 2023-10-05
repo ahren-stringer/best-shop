@@ -1,12 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { useEffect } from 'react';
 import './App.css';
+import { useAppDispatch, useAppSelector } from './app/hooks';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Outlet, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 
-function App() {
+function App(props: any) {
+console.log(props)
+  const dispatch = useAppDispatch();
+
+  // useEffect(() => {
+  //   dispatch(getProducts())
+  // }, [])
+
+  // const ss = useAppSelector(selectProducts)
+  // console.log(selectProducts)
+  // console.log(ss)
+
+
+  // dispatch(addToCart(1))
+  // useEffect(() => {
+  //   dispatch(getCartProducts())
+  // }, [])
+  // const cartProds = useAppSelector(selectCartItems);
+  // const cartCount = useAppSelector(state => state.cart)
+  // console.log(cartProds)
+  // console.log(cartCount)
+
   return (
     <div className="App">
-      <header className="App-header">
+
+      <Header />
+      <div className="main-wrap">
+        <Outlet/>
+        {/* <Routes>
+          <Route path="/" element={<Catalog />} >
+            <Route errorElement={<ErrporPage />} />
+            <Route path="/products/:productId" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Route>
+        </Routes> */}
+      </div>
+      <Footer />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
@@ -50,7 +87,7 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
     </div>
   );
 }

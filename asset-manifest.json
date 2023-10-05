@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/best-shop/static/css/main.e92ef5a8.css",
+    "main.js": "/best-shop/static/js/main.e6fe1c18.js",
+    "static/js/787.28cb0dcd.chunk.js": "/best-shop/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/best-shop/index.html",
+    "main.e92ef5a8.css.map": "/best-shop/static/css/main.e92ef5a8.css.map",
+    "main.e6fe1c18.js.map": "/best-shop/static/js/main.e6fe1c18.js.map",
+    "787.28cb0dcd.chunk.js.map": "/best-shop/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e92ef5a8.css",
+    "static/js/main.e6fe1c18.js"
+  ]
+}

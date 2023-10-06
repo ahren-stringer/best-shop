@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "./",
+  "homepage": "https://ahren-stringer.github.io/best-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

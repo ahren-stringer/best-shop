@@ -19,7 +19,7 @@ function Catalog({allProducts}: catalogPropsType) {
                 <div className="row">
 
                     {
-                        allProducts.map(product => <div key={product.id} className="col-lg-3 col-md-6">
+                        allProducts.map(product => <div key={product.id} className="col-lg-3 col-md-6 mb-3">
                             <div className="top-products-item">
                                 <div className="products-image">
                                     <Link to={`products/${product.id}`}>
